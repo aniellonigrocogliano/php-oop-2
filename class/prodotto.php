@@ -3,10 +3,10 @@
         private string $nome;
         private string $descrizione;
         private string $image;
-        private float $prezzo;
+        private int $prezzo;
     
 
-    public function __construct(string $nome, string $descrizione, string $image, float $prezzo) {
+    public function __construct(string $nome, string $descrizione, string $image, int $prezzo) {
         $this->nome = $nome;
         $this->descrizione = $descrizione;
         $this->image = $image;
