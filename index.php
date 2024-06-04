@@ -55,4 +55,10 @@
 }
 ?>
 
-<?php ?>
+<?php 
+try {
+  $oggettoeccezione = new Tipologia('Gioco percriceti', 'Gioco percriceti', 'https://m.media-amazon.com/images/I/41U02zmwctL._AC_SR320,320_.jpg', 10, 'Criceti', 'Gioco');
+} catch (Exception $e) {
+  echo "<br>Eccezzione: " . $e->getMessage();
+}
+?>

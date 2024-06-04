@@ -8,8 +8,13 @@ require_once __DIR__ . "/prodotto.php";
         public function __construct(string $nome, string $descrizione, string $image, float $prezzo, string $categoria) {
 
             parent::__construct($nome, $descrizione, $image, $prezzo);
-            $this->categoria = $categoria;
-        }
+            if ($categoria!="Cane" && $categoria!="Gatto") {
+                throw new Exception("La categoria può essere solo cane o gatto");
+              };
+              $this->categoria = $categoria;
+            }
+            
+        
 
         /**
          * Get the value of categoria
