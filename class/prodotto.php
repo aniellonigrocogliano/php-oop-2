@@ -1,10 +1,14 @@
 <?php
-    class Prodotto{
+require_once __DIR__ . "/../traits/calculate.php";
+   
+class Prodotto{
+        use Calculate;
+
         private string $nome;
         private string $descrizione;
         private string $image;
         private int $prezzo;
-    
+   
 
     public function __construct(string $nome, string $descrizione, string $image, int $prezzo) {
         $this->nome = $nome;

@@ -46,7 +46,7 @@
     <p class="card-text"><i class="fa-solid fa-paw"></i> Adatto per <?php echo $prodotto->getCategoria(); if($prodotto->getCategoria()==="Cane"){echo " <i class=\"fa-solid fa-dog\"></i>";}else{echo " <i class=\"fa-solid fa-cat\"></i>";} ?></p>
     <p class="card-text"><i class="fa-solid fa-basket-shopping"></i> Categoria: <?php echo $prodotto->getTipologia(); ?></p>
     <p class="card-text"><i class="fa-solid fa-book-open"></i> Descrizione: <?php echo $prodotto->getDescrizione(); ?></p>
-    <p class="card-text"><i class="fa-solid fa-tag"></i> Prezzo: <?php echo $prodotto->getPrezzo(); ?> €</p>
+    <p class="card-text"><i class="fa-solid fa-tag"></i> Prezzo: <?php echo $prodotto->getPrezzo(); ?> € di cui IVA <?php $prodotto->setCalculateiva($prodotto->getPrezzo()); echo $prodotto->getCalculateivaTotal(); ?> €</p>
     
   </div>
 </div>
